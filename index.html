@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>أذان الوالد - خير الله</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #1e272e;
+            color: white;
+            text-align: center;
+            padding: 30px;
+        }
+        .card {
+            background: #2f3640;
+            border-radius: 20px;
+            padding: 25px;
+            margin: 20px auto;
+            max-width: 400px;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.4);
+        }
+        h1 { color: #00d2d3; font-size: 24px; }
+        .btn {
+            background: #ff9f43;
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            font-size: 20px;
+            border-radius: 12px;
+            cursor: pointer;
+            width: 100%;
+            font-weight: bold;
+            margin-top: 15px;
+        }
+        .btn:active { background: #e58e26; }
+    </style>
+</head>
+<body>
+
+    <h1>تطبيق أذان الحاج خير الله ❤️</h1>
+    <p>مخصص للآيفون - يعمل بضغطة زر</p>
+
+    <div class="card">
+        <h2>أوقات الصلاة (الصبح، الظهر، المغرب)</h2>
+        <p>اضغط للتشغيل عند وقت الصلاة</p>
+        <button class="btn" onclick="playPrayerAlarm()">تشغيل الأذان والتنبيه</button>
+    </div>
+
+    <!-- ملف الصوت المدمج (أذان مشهد + مناداة خير الله لمدة دقيقتين) -->
+    <audio id="fullAlarm" src="https://example.com/khairallah-adhan-loop.mp3"></audio>
+
+    <script>
+        function playPrayerAlarm() {
+            var audio = document.getElementById('fullAlarm');
+            audio.play().then(() => {
+                console.log("يعمل الآن بنجاح");
+            }).catch(error => {
+                alert("يرجى النقر على الشاشة أولاً ليسمح الجهاز بالصوت.");
+            });
+        }
+    </script>
+
+</body>
+</html>
